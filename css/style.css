@@ -1,0 +1,18 @@
+table {
+    display:table;
+    width:400px;
+    height:400px;
+    border:1px solid #000;
+}
+
+tr {
+    width:33%;
+    height:33%;
+    border:1px solid black;
+}
+
+td {
+    width:33%;
+    height:33%;
+    border:1px solid black;
+}
