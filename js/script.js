@@ -1,6 +1,11 @@
 var cells = ["a1","a2","a3","b1","b2","b3","c1","c2","c3"];
+var playerone = ["11","11","11","b1","b2","b3","c1","c2","c3"];
 var player = 1
 var count = 1
+
+$('#startbutton').click(function() {
+    location.reload();
+});
 
 function start(){
 	console.log(cells);
@@ -38,32 +43,32 @@ check();
 }
 
 function check(){
-	if(cells[0] == cells[1] == cells[2]){
-		console.log("win, gore")
+	if(cells[0] == cells[1] && cells[1] == cells[2]){
+		alert("win, 012")
 	}
-	else if(cells[3] == cells[4] == cells[5]){
-		console.log("win, levo")
+	else if(cells[3] == cells[4] && cells[4] == cells[5]){
+		alert("win, 345")
 	}
-	else if(cells[6] == cells[7] == cells[8]){
-		console.log("win, levo")
+	else if(cells[6] == cells[7] && cells[7] == cells[8]){
+		alert("win, 678")
 	}
-	else if(cells[6] == cells[4] == cells[2]){
-		console.log("win, levo")
+	else if(cells[6] == cells[4] && cells[4] == cells[2]){
+		alert("win, 642")
 	}
-	else if(cells[0] == cells[3] == cells[6]){
-		console.log("win, levo")
+	else if(cells[0] == cells[3] && cells[3] == cells[6]){
+		alert("win, ")
 	}
-	else if(cells[1] == cells[4] == cells[7]){
-		console.log("win, levo")
+	else if(cells[1] == cells[4] && cells[4] == cells[7]){
+		alert("win, levo")
 	}
-	else if(cells[2] == cells[5] == cells[8]){
-		console.log("win, levo")
+	else if(cells[2] == cells[5] && cells[5] == cells[8]){
+		alert("win, levo")
 	}
-	else if(cells[0] == cells[4] == cells[8]){
-		console.log("win, levo")
+	else if(cells[0] == cells[4] && cells[4] == cells[8]){
+		alert("win, levo")
 	}
 	else if(count>9){
-		console.log("draw");
+		alert("draw");
 	}
 	}
 // var comb = [
