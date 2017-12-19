@@ -16,3 +16,6 @@ td {
     height:33%;
     border:1px solid black;
 }
+
+.btn-block {
+    padding: 66px !important; 
