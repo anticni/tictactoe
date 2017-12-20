@@ -105,7 +105,7 @@ function check(){
 		if (containsAll(comb[j], playerone) == true){
 			alert("win player X");
 			$.each(comb[j], function(i){
-				$("#" + comb[j][i]).attr('class', 'btn btn-danger btn-block');;
+				$("#" + comb[j][i]).toggleClass("btn-primary btn-danger");
 			});
 			$("#playground :input").attr("disabled", true);
 			console.log("winning combo is" + comb[j])
@@ -113,7 +113,7 @@ function check(){
 		else if(containsAll(comb[j], playertwo) == true){
 			alert("win player O")
 			$.each(comb[j], function(i){
-				$("#" + comb[j][i]).attr('class', 'btn btn-danger btn-block');;
+				$("#" + comb[j][i]).toggleClass("btn-primary btn-danger");
 			});
 			$("#playground :input").attr("disabled", true);
 
