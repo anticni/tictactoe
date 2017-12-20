@@ -17,7 +17,7 @@ function play(el){
 
 switch(player){
 	case 1:
-	$(el).html("X");
+	$(el).attr('value', 'x');
 
 	$.each(cells, function(i){
 	if (cells[i] == el.id){
@@ -31,7 +31,8 @@ switch(player){
 	break;
 
 	case 2:
-	$(el).html("O");
+	$(el).attr('value', 'o');
+
 	$.each(cells, function(i){
 	if (cells[i] == el.id){
 		cells[i] = "o"
@@ -103,10 +104,19 @@ function check(){
 	$.each(comb, function(j){
 		if (containsAll(comb[j], playerone) == true){
 			alert("win player X");
+			$.each(comb[j], function(i){
+				$("#" + comb[j][i]).attr('class', 'btn btn-danger btn-block');;
+			});
+			$("#playground :input").attr("disabled", true);
 			console.log("winning combo is" + comb[j])
 		}
 		else if(containsAll(comb[j], playertwo) == true){
 			alert("win player O")
+			$.each(comb[j], function(i){
+				$("#" + comb[j][i]).attr('class', 'btn btn-danger btn-block');;
+			});
+			$("#playground :input").attr("disabled", true);
+
 		}
 		else{console.log("no")}
 
